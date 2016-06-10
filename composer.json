@@ -1,0 +1,11 @@
+{
+    "name": "odannyc/easydumper",
+    "description": "A super easy way to dump data to the browser. A good alternative to the ugly var_dump().",
+    "authors": [
+        {
+            "name": "Danny Carrillo",
+            "email": "odannycx@gmail.com"
+        }
+    ],
+    "require": {}
+}
