@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the test sipit package.
+ * This file is part of the test EasyDumper package.
  *
  * Danny Carrillo <odannycx@gmail.com>
  *
@@ -9,27 +9,32 @@
  * file that was distributed with this source code.
  */
 
-namespace tests;
-
-use PHPUnit_Framework_TestCase;
-use Sipit\SipitFactory as Sipit;
-
 /**
  * Used to test Pings to different IP addresses.
  */
-class PingTest extends PHPUnit_Framework_TestCase
+class DumperTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * Test to live IP, needs to return 200 OK status.
+     * Just dumps a simple array. Test to see if what it dumps is correct.
      *
      * @return assertion
      */
     public function testPingToLiveIp()
     {
-        $dstIp = '184.154.184.90';
-        $dstPort = 5060;
-        $res = Sipit::ping($dstIp, $dstPort);
+        $randomArray = [
+            "test" => "array",
+            "im" => "cool",
+            "danny" => "is awesome",
+            "just" => "random gibberish"
+        ];
 
-        $this->assertEquals($res, 200);
+        $randomArray2 = [
+            "more" => "stuff",
+            "hello" => "2",
+        ];
+
+        $randomVar = 12122;
+
+        d($randomArray);
     }
 }
