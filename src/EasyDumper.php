@@ -20,5 +20,7 @@ if (!function_exists('d')) {
         }
 
         echo '</pre>';
+
+        die();
     }
 }
